@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00b4d8">
+  <title>Invitación Fiesta de Disfraces - Fondo de Bikini | Bob Esponja</title>
+
+  <!-- ================================================================
+       ✏️ GUÍA RÁPIDA DE EDICIÓN
+
+       TEXTO
+       - Cambia el contenido de <h1>, <h2> y <p> donde veas "✏️ EDITABLE".
+
+       ENLACES / PÁGINAS
+       - CARD 4: cambia href="https://maps.google.com" por tu Google Maps/Waze.
+       - CARD 5: cambia href="https://..." si quieres que la imagen de referencia
+         abra una página distinta. La imagen de la tarjeta es un PNG del personaje.
+       - CARD 6: cambia href="https://spotify.com" por tu playlist.
+       - CARD 7: cambia href="https://wa.me/" por tu WhatsApp.
+       - CARD 8: cambia href="https://docs.google.com/forms" por tu formulario.
+
+       IMÁGENES
+       - Cada <img> tiene un comentario "✏️ EDITABLE: PNG ..." justo arriba.
+       - Cambia SOLO el valor de src="URL_DEL_PNG".
+       - Todas las imágenes del diseño son PNG y corresponden a personajes o
+         elementos del universo de SpongeBob SquarePants; se usan como elementos
+         independientes para evitar que el contenido se desplace.
+
+       DECORACIÓN
+       - Los elementos .deco están repartidos manualmente por toda la tarjeta.
+       - Puedes cambiar cada imagen o su posición individualmente modificando
+         top / left / right / bottom dentro de su .deco correspondiente.
+
+       FUENTE
+       - Se usa "Blob Spongey Lowercase", una tipografía web inspirada en la
+         estética de SpongeBob. Si no carga, el navegador usa la siguiente fuente.
+
+       IMPORTANTE
+       - Se quitó por completo el bloque de conteo de la CARD 3.
+       - No se usan flores, medusas ni personajes dibujados con CSS/emojis como
+         imágenes: los elementos visuales son archivos PNG externos.
+       ================================================================ -->
+  <link href="https://fonts.cdnfonts.com/css/blob-spongey-lowercase" rel="stylesheet">
+
+  <style>
+        @import url("https://db.onlinewebfonts.com/c/d3514c022a5b4da43b1924e7ab50991a?family=Blob+Spongey+Lowercase");
+    @page {
+      size: 108mm 192mm;
+      margin: 0;
+    }
+
+    :root {
+      --ocean-dark: #0077b6;
+      --ocean: #00b4d8;
+      --ocean-light: #90e0ef;
+      --yellow: #ffe600;
+      --pink: #ff007f;
+      --red: #d90429;
+      --ink: #001219;
+      --card-glass: rgba(0, 48, 73, .44);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--ocean);
+    }
+
+    body {
+      font-family: 'Blob Spongey Lowercase', 'Comic Sans MS', 'Chalkboard SE', 'Helvetica Neue', Arial, sans-serif;
+      color: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .story-card {
+      width: 108mm;
+      height: 192mm;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 12% 16%, rgba(255,255,255,.12) 0 1.2mm, transparent 1.3mm),
+        radial-gradient(circle at 84% 82%, rgba(255,255,255,.10) 0 1.0mm, transparent 1.1mm),
+        linear-gradient(180deg, var(--ocean-dark) 0%, var(--ocean) 54%, var(--ocean-light) 100%);
+    }
+
+    /* Decoración marina sutil SIN crear imágenes con CSS. */
+    .story-card::before,
+    .story-card::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      filter: blur(.2mm);
+    }
+    .story-card::before { width: 18mm; height: 18mm; top: 28mm; left: -8mm; }
+    .story-card::after  { width: 25mm; height: 25mm; bottom: 15mm; right: -12mm; }
+
+    .story-header {
+      position: absolute;
+      z-index: 20;
+      top: 5mm;
+      left: 4mm;
+      right: 4mm;
+      height: 1.5mm;
+      background: rgba(255,255,255,.28);
+      border-radius: 10mm;
+      overflow: hidden;
+    }
+
+    .story-header-fill {
+      height: 100%;
+      background: var(--pink);
+      border-radius: inherit;
+    }
+
+    .story-content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      min-height: 100%;
+      padding: 17mm 3mm 13mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .badge {
+      width: 96%;
+      max-width: 101mm;
+      padding: 2.2mm 2.8mm;
+      margin: 0 0 2.4mm;
+      background: var(--yellow);
+      border: .7mm solid var(--pink);
+      color: var(--red);
+      border-radius: 7mm;
+      font-size: 9.5pt;
+      font-weight: 800;
+      letter-spacing: .35pt;
+      text-transform: uppercase;
+      text-shadow: .3mm .3mm 0 #fff;
+    }
+
+    h1, h2, p { width: 100%; }
+
+    h1 {
+      margin: 1.5mm 0 2mm;
+      padding: 0 1mm;
+      font-size: 26pt;
+      line-height: 1.04;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: .4pt;
+      text-shadow: .7mm .7mm 0 #000, 0 0 2.8mm var(--pink);
+    }
+
+    h2 {
+      margin: 1.5mm 0 3mm;
+      padding: 0 1mm;
+      font-size: 19pt;
+      line-height: 1.08;
+      color: var(--pink);
+      text-shadow: .5mm .5mm 0 #000;
+    }
+
+    p {
+      margin: 1.2mm 0;
+      padding: 0 1.3mm;
+      font-size: 11pt;
+      line-height: 1.28;
+      color: #fff;
+      text-shadow: .35mm .35mm .7mm rgba(0,0,0,.65);
+    }
+
+    .main-image {
+      width: auto;
+      max-width: 43mm;
+      max-height: 57mm;
+      height: auto;
+      object-fit: contain;
+      margin: 1.5mm auto 1.5mm;
+      display: block;
+      filter: drop-shadow(0 2.2mm 1.8mm rgba(0,0,0,.30));
+    }
+
+    .main-image.short { max-height: 46mm; }
+    .main-image.wide  { max-width: 57mm; max-height: 40mm; }
+
+    .highlight-box {
+      width: 98%;
+      padding: 2.8mm 2.2mm;
+      margin: 2.2mm auto;
+      background: var(--card-glass);
+      border: .7mm dashed var(--yellow);
+      border-radius: 4mm;
+      text-align: center;
+    }
+
+    .highlight-box p { margin: 1mm 0; }
+
+    .btn {
+      width: 96%;
+      display: block;
+      padding: 3mm 2mm;
+      margin-top: 2.5mm;
+      border-radius: 8mm;
+      border: .7mm solid #fff;
+      text-decoration: none;
+      font-size: 11pt;
+      font-weight: 800;
+      text-align: center;
+      color: #000;
+      background: linear-gradient(90deg, var(--yellow), #ff9f1c);
+      box-shadow: 0 1.4mm 3mm rgba(0,0,0,.28);
+    }
+
+    .btn.spotify { background: linear-gradient(90deg, #1db954, #128c7e); color: #fff; }
+    .btn.whatsapp { background: linear-gradient(90deg, #25d366, #128c7e); color: #fff; }
+
+    .costume-note {
+      width: 96%;
+      margin: 1.5mm 0 1mm;
+      font-size: 12pt;
+      font-weight: 900;
+      color: var(--yellow);
+      text-shadow: .5mm .5mm 0 #000;
+      text-transform: uppercase;
+    }
+
+    .costume-example {
+            width: 86mm;
+            max-width: 96%;
+            max-height: 92mm;
+        }
+
+        .costume-img {
+      width: auto;
+      max-width: 47mm;
+      max-height: 66mm;
+      object-fit: contain;
+      margin: 1mm auto 1.6mm;
+      display: block;
+      filter: drop-shadow(0 2mm 1.8mm rgba(0,0,0,.3));
+    }
+
+    /* PNG decorativos individuales, grandes y repartidos por toda la tarjeta. */
+    .deco {
+      position: absolute;
+      z-index: 4;
+      display: block;
+      width: auto;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+      filter: drop-shadow(0 1.2mm 1.2mm rgba(0,0,0,.25));
+    }
+
+    .deco img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .d-xs { width: 14mm; }
+    .d-sm { width: 18mm; }
+    .d-md { width: 23mm; }
+    .d-lg { width: 28mm; }
+    .d-xl { width: 33mm; }
+
+    .tl { top: 10mm; left: 2mm; transform: rotate(-8deg); }
+    .tr { top: 11mm; right: 2mm; transform: rotate(8deg); }
+    .ml { top: 72mm; left: 1mm; transform: rotate(-5deg); }
+    .mr { top: 77mm; right: 1mm; transform: rotate(6deg); }
+    .bl { bottom: 10mm; left: 2mm; transform: rotate(7deg); }
+    .br { bottom: 9mm; right: 2mm; transform: rotate(-7deg); }
+    .bc { bottom: 3mm; left: 50%; transform: translateX(-50%) rotate(2deg); }
+    .tm { top: 34mm; left: 50%; transform: translateX(-50%) rotate(-2deg); }
+
+    .footer-tag {
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      right: 0;
+      bottom: 3.5mm;
+      text-align: center;
+      font-size: 8pt;
+      color: var(--yellow);
+      font-weight: 900;
+      letter-spacing: .7pt;
+      text-shadow: .35mm .35mm 0 #000;
+    }
+
+    .small-label {
+      width: 94%;
+      font-size: 9pt;
+      color: #fff;
+    }
+
+    @media screen {
+      .story-card {
+        margin: 10px auto;
+        box-shadow: 0 8px 30px rgba(0,0,0,.25);
+      }
+    }
+
+    @media print {
+      .story-card { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================================
+       BANCO DE PNG TRANSPARENTES UTILIZADOS
+       SpongeBob: Wikimedia Commons — PNG
+       Patrick: KindPNG — PNG sin fondo
+       Gary: NicePNG — PNG sin fondo
+       Squidward: NicePNG — PNG sin fondo
+       Sandy: PNGKey — PNG sin fondo
+       Mr. Krabs: VHV — PNG transparente
+       Plankton: PNGAAA — PNG transparente
+       Piña: PNGKey — PNG transparente
+       Jellyfish/SpongeBob: PinClipart — PNG transparente
+       ================================================================ -->
+
+  <!-- =============================== CARD 1 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:9%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio Estrella PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-md tr"><img src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-md ml"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-lg br"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 7 -->
+    <div class="deco d-sm bc"><img src="https://www.pinclipart.com/picdir/middle/400-4007852_jellyfish-clipart-spongebob-spongebob-jellyfish-transparent-background-png.png" alt="Medusa y Bob Esponja PNG transparente"></div>
+
+    <div class="story-content">
+      <!-- ✏️ EDITABLE: etiqueta superior -->
+      <div class="badge">¡Atención Fondo de Bikini!</div>
+      <!-- ✏️ EDITABLE: imagen principal -->
+      <img class="main-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente">
+      <!-- ✏️ EDITABLE: título -->
+      <h1>¡Algo Grande<br>se Prepara!</h1>
+      <!-- ✏️ EDITABLE: mensaje -->
+      <p>Una noche marina donde nadie será quien parece ser...</p>
+      <p style="font-size:9.5pt;color:#ffe600;font-weight:900;margin-top:3mm">desliza para descubrir ➔</p>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 2 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:18%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-md ml"><img src="https://www.nicepng.com/png/detail/12-124270_squidward-tentacles-png-squidward-from-spongebob.png" alt="Calamardo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-md bl"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-xl br"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 7 -->
+    <div class="deco d-sm bc"><img src="https://www.clipartmax.com/png/middle/234-2342521_spongebob-giving-flower-by-frankyounghacker-spongebob-flowers.png" alt="Bob Esponja con flor PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Estás Invitado</div>
+      <!-- ✏️ EDITABLE: imagen principal -->
+      <img class="main-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio Estrella PNG transparente">
+      <!-- ✏️ EDITABLE: título -->
+      <h1 style="color:#ff007f">FIESTA DE<br>DISFRACES</h1>
+      <!-- ✏️ EDITABLE: frase temática -->
+      <p style="font-size:12pt;color:#ffe600;font-weight:900">¿Quién serás debajo de la máscara?</p>
+      <!-- ✏️ EDITABLE: texto adicional -->
+      <p>Entrada obligatoria con disfraz (¡o te enviamos con Plankton!)</p>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 3 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:27%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-md tl"><img src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-md tr"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-lg ml"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-lg br"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+
+    <div class="story-content">
+      <!-- ✏️ EDITABLE: imagen principal -->
+      <img class="main-image" src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente">
+      <h2>FECHA Y HORA</h2>
+      <!-- ✏️ EDITABLE: modifica la fecha y hora aquí -->
+      <div class="highlight-box">
+        <p style="font-size:15pt;font-weight:900;color:#ffe600">📅 Sábado 31 de Octubre</p>
+        <p style="font-size:13pt;font-weight:900">⏰ 8:00 PM</p>
+      </div>
+      <!-- ✏️ EDITABLE: mensaje -->
+      <p>¡Prepara tu disfraz antes de que las medusas despierten!</p>
+      <!-- El bloque de conteo fue eliminado de esta tarjeta. -->
+    </div>
+  </section>
+
+  <!-- =============================== CARD 4 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:36%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-md ml"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-md mr"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-sm br"><img src="https://www.pinclipart.com/picdir/middle/400-4007852_jellyfish-clipart-spongebob-spongebob-jellyfish-transparent-background-png.png" alt="Medusa y Bob Esponja PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Coordenadas de la Fiesta</div>
+      <h2>¿DÓNDE ES LA CITA?</h2>
+      <!-- ✏️ EDITABLE: cambia nombre y dirección aquí -->
+      <div class="highlight-box">
+        <p style="font-weight:900;color:#ffe600;font-size:12pt">🏠 Casa de Bob Esponja (La Piña)</p>
+        <p style="font-size:11pt">Calle Conchita #124, Fondo de Bikini</p>
+        <p style="color:#90e0ef;font-size:9.5pt">Estacionamiento para Botes disponible</p>
+      </div>
+      <!-- ✏️ EDITABLE: cambia href por Google Maps o Waze -->
+      <a href="https://maps.google.com" class="btn">🗺️ Abrir en Google Maps / Waze</a>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 5 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:45%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-md ml"><img src="https://www.nicepng.com/png/detail/12-124270_squidward-tentacles-png-squidward-from-spongebob.png" alt="Calamardo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-md br"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 7 -->
+    <div class="deco d-sm bc"><img src="https://www.clipartmax.com/png/middle/234-2342521_spongebob-giving-flower-by-frankyounghacker-spongebob-flowers.png" alt="Bob Esponja con flor PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Premiación Oficial</div>
+      <h2>DISFRAZ OBLIGATORIO</h2>
+      <!-- ✏️ EDITABLE: texto principal del requisito de disfraz -->
+      <p class="costume-note">Disfraz obligatorio con temática de Bob Esponja</p>
+      <p class="small-label">Inspírate en Fondo de Bikini y crea tu propia versión del personaje.</p>
+      <!-- ✏️ EDITABLE: imagen GRANDE de ejemplo de disfraz.
+           Cambia SOLO src por otro PNG directo y transparente de un disfraz/referencia. -->
+      <img
+          class="costume-img costume-example"
+          src="https://w7.pngwing.com/pngs/838/267/png-transparent-spongebob-squarepants-cartoon-in-halloween-costume-spongebob-squarepants-halloween-costume-spongebob-squarepants-cartoon.png"
+          alt="Ejemplo de disfraz de Bob Esponja">
+    </div>
+  </section>
+
+  <!-- =============================== CARD 6 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:54%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-md tl"><img src="https://www.nicepng.com/png/detail/12-124270_squidward-tentacles-png-squidward-from-spongebob.png" alt="Calamardo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-lg ml"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-sm br"><img src="https://www.pinclipart.com/picdir/middle/400-4007852_jellyfish-clipart-spongebob-spongebob-jellyfish-transparent-background-png.png" alt="Medusa y Bob Esponja PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Música de Fondo de Bikini</div>
+      <h2>PLAYLIST COLABORATIVA</h2>
+      <p>¿Qué música no puede faltar en la fiesta?</p>
+      <div class="highlight-box">
+        <p style="color:#ffe600;font-weight:900;font-size:11pt">🎧 "La Canción de la Esponja" &amp; Más</p>
+        <p style="font-size:9.5pt">Agrega tus temas favoritos a la lista oficial de Spotify.</p>
+      </div>
+      <!-- ✏️ EDITABLE: cambia href por tu playlist -->
+      <a href="https://spotify.com" class="btn spotify">🎶 Agregar Canciones a Spotify</a>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 7 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:63%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-md ml"><img src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-lg bl"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-md br"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Confirmación</div>
+      <h2>CONFIRMA TU ASISTENCIA</h2>
+      <!-- ✏️ EDITABLE: cambia la fecha límite -->
+      <p>Por favor confirma antes del <strong>25 de Octubre</strong> para calcular las Cangreburguers.</p>
+      <!-- ✏️ EDITABLE: cambia href por tu WhatsApp directo -->
+      <a href="https://wa.me/" class="btn whatsapp">💬 Confirmar por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 8 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:72%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-md tr"><img src="https://www.nicepng.com/png/detail/12-124270_squidward-tentacles-png-squidward-from-spongebob.png" alt="Calamardo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-lg ml"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-md br"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 7 -->
+    <div class="deco d-sm bc"><img src="https://www.clipartmax.com/png/middle/234-2342521_spongebob-giving-flower-by-frankyounghacker-spongebob-flowers.png" alt="Bob Esponja con flor PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Lista Pública</div>
+      <h2>¿DE QUÉ VENDRÁS DISFRAZADO?</h2>
+      <p>Registra tu personaje para que los demás sepan y no repitan disfraz.</p>
+      <div class="highlight-box">
+        <p style="color:#ffe600;font-weight:900;font-size:11pt">📋 Registro Abierto</p>
+        <p style="font-size:9.5pt">Agrega tu Nombre + Disfraz y mira la lista en tiempo real.</p>
+      </div>
+      <!-- ✏️ EDITABLE: cambia href por tu Google Form / Sheets -->
+      <a href="https://docs.google.com/forms" class="btn">✏️ Registrar Nombre y Disfraz</a>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 9 =============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:81%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-xl tl"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-md ml"><img src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-md br"><img src="https://image.pngaaa.com/596/1226596-middle.png" alt="Plankton PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Menú &amp; Detalles</div>
+      <h2>DETALLES DE LA NOCHE</h2>
+      <!-- ✏️ EDITABLE: personaliza la logística e indicaciones -->
+      <div class="highlight-box">
+        <p>🍔 <strong>Cangreburguers &amp; Drinks:</strong> Barra libre de Malteadas de Algas.</p>
+        <p>🍕 <strong>Snacks:</strong> Bocadillos Marinos a partir de las 10:00 PM.</p>
+        <p>🆔 <strong>Pase de Entrada:</strong> Obligatorio venir disfrazado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 10 ============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:90%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-lg tl"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-xl ml"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-md br"><img src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 7 -->
+    <div class="deco d-sm bc"><img src="https://www.clipartmax.com/png/middle/234-2342521_spongebob-giving-flower-by-frankyounghacker-spongebob-flowers.png" alt="Bob Esponja con flor PNG transparente"></div>
+
+    <div class="story-content">
+      <div class="badge">Sugerencia de Regalos</div>
+      <h2>REGALOS &amp; DETALLES</h2>
+      <p>Tu presencia y tu gran disfraz son nuestro mayor regalo en Fondo de Bikini.</p>
+      <!-- ✏️ EDITABLE: nota o datos opcionales -->
+      <div class="highlight-box">
+        <p style="font-size:10pt">Si deseas tener un detalle adicional, contaremos con un Cofre del Tesoro para lluvia de sobres en el evento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== CARD 11 ============================== -->
+  <section class="story-card">
+    <div class="story-header"><div class="story-header-fill" style="width:100%"></div></div>
+
+    <!-- ✏️ EDITABLE: PNG decorativo individual 1 -->
+    <div class="deco d-xl tl"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 2 -->
+    <div class="deco d-lg tr"><img src="https://www.nicepng.com/png/full/510-5100742_bob-esponja-png.png" alt="Gary PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 3 -->
+    <div class="deco d-lg ml"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patrick_Star_character.png" alt="Patricio PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 4 -->
+    <div class="deco d-lg mr"><img src="https://www.pngkey.com/png/detail/313-3139708_sandy-cheeks-sandy-from-spongebob.png" alt="Sandy PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 5 -->
+    <div class="deco d-xl bl"><img src="https://www.pngkey.com/png/detail/207-2073524_pineapple-transparent-spongebob-spongebob-pineapple-clipart.png" alt="Piña de Bob Esponja PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 6 -->
+    <div class="deco d-lg br"><img src="https://www.vhv.rs/dpng/d/575-5754468_crabs-clipart-mr-crab-crabs-mr-crab-transparent.png" alt="Don Cangrejo PNG transparente"></div>
+    <!-- ✏️ EDITABLE: PNG decorativo individual 7 -->
+    <div class="deco d-sm bc"><img src="https://www.pinclipart.com/picdir/middle/400-4007852_jellyfish-clipart-spongebob-spongebob-jellyfish-transparent-background-png.png" alt="Medusa y Bob Esponja PNG transparente"></div>
+
+    <div class="story-content">
+      <!-- ✏️ EDITABLE: imagen principal final -->
+      <img class="main-image short" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob_SquarePants_character.png" alt="Bob Esponja PNG transparente">
+      <!-- ✏️ EDITABLE: cierre -->
+      <h1>¡ESTÁS LISTO CHICO!</h1>
+      <!-- ✏️ EDITABLE: mensaje final -->
+      <p style="font-size:12pt;font-weight:900">¡Nos vemos en el fondo del mar!</p>
+      <!-- ✏️ EDITABLE: hashtag -->
+      <p style="color:#ffe600;font-weight:900;font-size:13pt;margin-top:4mm">#FiestaBobEsponja2026</p>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FUENTES VISUALES CONSULTADAS
+       - SpongeBob / Patrick / Gary / archivos de personaje: Wikimedia Commons.
+       - Sandy: PNGKey.
+       - Mr. Krabs: VHV transparent PNG.
+       - Plankton: PNGAAA, descrito como PNG con fondo transparente.
+       - Piña: PNGKey, descrita como PNG transparente.
+       - Medusa + Bob Esponja / flores: PinClipart / PNGAll, descritos como PNG transparentes.
+       - Tipografía: Blob Spongey Lowercase, disponible como webfont.
+       ================================================================ -->
+</body>
+</html>
